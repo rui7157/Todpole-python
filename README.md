@@ -29,4 +29,4 @@ ctrl+c 停止
 预览
 ===
 
-!(https://github.com/rui7157/Todpole-python/blob/master/demo.gif)
+![demo](https://github.com/rui7157/Todpole-python/blob/master/demo.gif)

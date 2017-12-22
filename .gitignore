@@ -62,7 +62,6 @@ target/
 Scripts/
 venv.sublime-workspace
 *.sqlite
-Lib/
 Include/
 .idea/
 *.pyc

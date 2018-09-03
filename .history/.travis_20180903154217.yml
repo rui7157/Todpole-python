@@ -1,0 +1,18 @@
+language: python
+python:
+  - "2.7"
+  - "3.6"
+  
+install:
+  - pip install flask gevent==1.2.0 gevent-websocket==0.10.1
+
+script:
+  - pylint pyhap test
+  - mypy --ignore-missing-imports pyhap
+  - pytest --cov pyhap
+
+after_success:
+  - coveralls
+
+notifications:
+  email: false

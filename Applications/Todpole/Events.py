@@ -44,9 +44,9 @@ class EchoApplication(object):
         JOIN_USER.append(self.ws)
 
         self.ws.send('{"type": "welcome", "id": %s}' % self.session_id)
-        print u"用户上线：%s" % self.session_id
-        print u"当前用户:{}".format(
-            "|".join([str(id(ws)) for ws in JOIN_USER]))
+        print(u"用户上线：%s" % self.session_id)
+        print(u"当前用户:{}".format(
+            "|".join([str(id(ws)) for ws in JOIN_USER])))
 
     def on_message(self, message):
         """发送消息"""
@@ -81,11 +81,11 @@ class EchoApplication(object):
         global JOIN_USER
         self.ws.close()
         JOIN_USER = filter(lambda ws: ws != self.ws, JOIN_USER)
-        print u"当前用户:{}".format(
-            "|".join([str(id(ws)) for ws in JOIN_USER]))
+        print(u"当前用户:{}".format(
+            "|".join([str(id(ws)) for ws in JOIN_USER])))
         for ws in JOIN_USER:
             ws.send('{"type":"closed","id":%s}' % self.session_id)
-        print reason
+        print(reason)
 
 
 @app.route("/")
@@ -98,6 +98,6 @@ def index():
 
 
 if __name__ == "__main__":
-    print "Running on http://127.0.0.1:8282/ (Press CTRL+C to quit)"
+    print("Running on http://127.0.0.1:8282/ (Press CTRL+C to quit)")
     WSGIServer(("127.0.0.1", 8282), app,
                handler_class=WebSocketHandler).serve_forever()

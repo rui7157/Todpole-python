@@ -7,7 +7,7 @@ install:
   - pip install flask gevent==1.2.0 gevent-websocket==0.10.1
 
 script:
-  - python main.py
+  - python tests/test_selenuim.py
 
 
 notifications:

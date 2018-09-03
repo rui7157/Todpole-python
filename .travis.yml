@@ -4,7 +4,7 @@ python:
   - "3.6"
   
 install:
-  - pip install flask gevent==1.2.0 gevent-websocket==0.10.1
+  - pip install flask gevent==1.2.0 gevent-websocket==0.10.1 selenium 
 
 script:
   - python tests/test_selenuim.py

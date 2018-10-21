@@ -8,6 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.hisyory/
 env/
 build/
 develop-eggs/
